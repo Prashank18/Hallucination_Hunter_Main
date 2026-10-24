@@ -1,0 +1,49 @@
+/* Hallucination Hunter - capture toast injected into pages.
+   Everything is scoped under #hh-capture-toast so host page styles stay untouched. */
+
+#hh-capture-toast {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2147483647;
+  font: 500 12.5px/1.4 'Segoe UI', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  animation: hh-toast-in 0.18s ease-out both;
+  transition: opacity 0.2s ease;
+}
+
+#hh-capture-toast.hh-leaving { opacity: 0; }
+
+#hh-capture-toast .hh-toast-inner {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  max-width: 340px;
+  padding: 9px 10px 9px 12px;
+  background: #1c1a17;
+  color: #ece6da;
+  border-radius: 6px;
+  box-shadow: 0 10px 24px -12px rgba(0, 0, 0, 0.55);
+}
+
+#hh-capture-toast svg { flex-shrink: 0; display: block; }
+#hh-capture-toast strong { font-weight: 700; color: #fff; }
+
+#hh-capture-toast .hh-toast-close {
+  margin: 0 0 0 2px;
+  padding: 0 4px;
+  border: 0;
+  background: none;
+  color: #a59c8d;
+  font: 16px/1 inherit;
+  cursor: pointer;
+}
+#hh-capture-toast .hh-toast-close:hover { color: #fff; }
+
+@keyframes hh-toast-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #hh-capture-toast { animation: none; transition: none; }
+}
