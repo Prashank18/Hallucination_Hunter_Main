@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center">
   <img src="logo.png" alt="Hallucination Hunter" width="72" height="72">
 </p>
@@ -275,3 +276,6 @@ MIT — see [LICENSE](LICENSE).
 <p align="center">
   <sub>Built for truth in the age of AI.</sub>
 </p>
+=======
+# Hallucination_Hunter_Main
+>>>>>>> 49e03794d12bfdfb9930c35c24033167a1ff8a29
